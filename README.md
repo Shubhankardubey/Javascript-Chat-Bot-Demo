@@ -1,6 +1,6 @@
 # Javascript-Chat-Bot-Demo
 This chatbot suggest you all the suggestions on what the user inputs, also it performs some mathematics calculations. 
-Demo -> [Javascript-Chat-Bot-Demo](https://shubhankardubey.github.io/Javascript-Chat-Bot-Demo/demo/demo-ddg.html)
+  Demo -> [Javascript-Chat-Bot-Demo](https://shubhankardubey.github.io/Javascript-Chat-Bot-Demo/demo/demo-ddg.html)
 
 # chatbot
 A simple chat bot in JavaScript with links to smart conversational APIs such as [DuckDuckGo Instant Answers](https://duckduckgo.com/api) (mostly entities like movies, people, and places).
