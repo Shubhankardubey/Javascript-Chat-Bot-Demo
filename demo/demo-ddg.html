@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <title>Javascript Chat Bot Demo</title>
     <style>
@@ -97,10 +96,24 @@
     ChatBot.addPattern("(?:my name is|I'm|I am) (.*)", "response", "hi $1, thanks for talking to me today", function (matches) {
         ChatBot.setHumanName(matches[1]);
     },"Say 'My name is [your name]' or 'I am [name]' to be called that by the bot");
-    ChatBot.addPattern("(what is the )?meaning of life", "response", "42", undefined, "Say 'What is the meaning of life' to get the answer.");
+    // ChatBot.addPattern("(what is the )?meaning of life", "response", "Human life may not have been created with any pre-determined purpose, but this need not mean that it cannot have a purpose, nor that this purpose cannot be just as good as, if not much better than, any pre-determined one.", undefined, "Say 'What is the meaning of life' to get the answer.");
     ChatBot.addPattern("compute ([0-9]+) plus ([0-9]+)", "response", undefined, function (matches) {
         ChatBot.addChatEntry("That would be "+(1*matches[1]+1*matches[2])+".","bot");
     },"Say 'compute [number] plus [number]' to make the bot your math monkey");
+    ChatBot.addPattern("compute ([0-9]+) subtract ([0-9]+)", "response", undefined, function (matches) {
+        ChatBot.addChatEntry("That would be "+(1*matches[1]-1*matches[2])+".","bot");
+    },"Say 'compute [number] subtract [number]' to make the bot your math monkey");
+    ChatBot.addPattern("compute ([0-9]+) multiply ([0-9]+)", "response", undefined, function (matches) {
+        ChatBot.addChatEntry("That would be "+(1*matches[1]*1*matches[2])+".","bot");
+    },"Say 'compute [number] multiply [number]' to make the bot your math monkey");
+    ChatBot.addPattern("Who made you?", "response", "Group of four peoples, i.e, Priyanka, Prajjwal, Amit, Shubhankar", undefined, "Say 'Who made you' to get the discovery person of this chatbot.");
+    ChatBot.addPattern("(Who is your )?Head of department", "response", "A.K.Solanki Sir", undefined, "Say 'Head of department' to get the answer about the Head Of Department.");
+    ChatBot.addPattern("(Tell me about )?Prajjwal", "response", "Prajjwal is a student of IT branch. His roll number is 15. He is a nice person and used to play Action games a lot.", undefined, "Say 'Prajjwal' to get the answer about the Group Member");
+    ChatBot.addPattern("(Tell me about )?Group Leader", "response", "Priyanka is our group leader and also a student of IT branch. Her roll number is 16. She is a polite person.", undefined, "Say 'Group Leader' to get the answer about the Group Leader");
+    ChatBot.addPattern("(Tell me about )?Amit Dubey", "response", "Amit is our group member and also a student of IT branch. He come in 2nd year with lateral entry. He used to bring bike.", undefined, "Say 'Amit' to get the answer about the Group Member");
+    ChatBot.addPattern("(Tell me about )?Developer", "response", "Shubhankar is the developer of this chatbot and also a student of IT branch. Priyanka, Amit, Prajjwal helps to build this chatbot. His roll number is 25. He used to play cricket a lot.", undefined, "Say 'Developer' to get the answer about the Project Developer");
+    ChatBot.addPattern("(Tell me about )?Faculty", "response", "Information Technology has some good quality experienced teachers. They are Er.Pawan Gupta Sir, Er.Anuj Gupta Sir, Er.Dharmendra Singh Sir, Er.Sweta Rajppot Ma'am, Er.Sharad Kumar", undefined, "Say 'Faculty' to get the answer about the Faculty Guides");
+    ChatBot.addPattern("(Tell me about your )?Guide", "response", "Mr.Dharmendra Singh Sir", undefined, "Say 'Guide' to get the answer about the Faculty Guides");
 
 </script>
 </body>
